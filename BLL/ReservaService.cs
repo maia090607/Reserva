@@ -28,7 +28,7 @@ namespace BLL
 
         public List<Reserva> ObtenerTodo()
         {
-            throw new NotImplementedException();
+            return reservas;
         }
     }
 }

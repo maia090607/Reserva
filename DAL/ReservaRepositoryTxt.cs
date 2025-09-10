@@ -19,7 +19,7 @@ namespace DAL
                 StreamWriter escritor = new StreamWriter(ruta, true);
                 escritor.WriteLine($"{entity.Id};{entity.Solicitante};{entity.Sala};{entity.Fecha}");
                 escritor.Close();
-                return $"se guardo la reserva de {entity.Solicitante}";
+                return  $"                                  se guardo la reserva de {entity.Solicitante}";
             }
             catch (Exception ex)
             {
@@ -55,7 +55,7 @@ namespace DAL
             reserva.Id = int.Parse(linea.Split(';')[0]);
             reserva.Solicitante = linea.Split(';')[1];
             reserva.Sala = int.Parse(linea.Split(';')[2]);
-            reserva.Solicitante = linea.Split(';')[4];
+            reserva.Fecha = linea.Split(';')[3];
             return reserva;
         }
     }
