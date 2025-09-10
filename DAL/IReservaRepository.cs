@@ -10,5 +10,6 @@ namespace DAL
     {
         string Agregar(Reserva entity);
         List<Reserva> ObtenerTodo();
+       
     }
 }
